@@ -1,0 +1,16 @@
+[package]
+name = "google_colab_manage_session"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+anyhow = "1.0.104"
+argon2 = "0.6.0"
+clap = { version = "4.6.7", features = ["derive"] }
+rpassword = "7.5.4"
+serde = { version = "1.0.229", features = ["derive"] }
+serde_json = "1.0.152"
+
+[[bin]]
+name = "colabm"
+path = "src/main.rs"

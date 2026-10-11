@@ -1,0 +1,28 @@
+# Rust build output
+/target
+**/*.rs.bk
+
+# Colab / Google credentials and colabm data. These live outside the repo
+# normally; ignored here so a stray copy can never be committed.
+token.json
+token.json.*
+sessions.json
+sessions.json.lock
+colab.log
+.colab-cli-oauth-config.json
+client_secret*.json
+/accounts/
+state.json
+.env
+.env.*
+
+# Editors and OS
+.idea/
+.vscode/
+*.swp
+*~
+.DS_Store
+
+# Local tool state
+.claude/settings.local.json
+.codegraph/
