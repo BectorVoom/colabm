@@ -8,8 +8,13 @@ For a step-by-step walkthrough, see [USER_MANUAL.md](USER_MANUAL.md).
 
 ## Install
 
+Pick one. Each builds the `colabm` binary from source, so Rust (`cargo`) must
+be installed.
+
 ```bash
-cargo install --path .        # installs the `colabm` binary
+uv tool install git+https://github.com/BectorVoom/colabm            # with uv, like the Colab CLI itself
+cargo install --git https://github.com/BectorVoom/colabm --locked   # with cargo
+cargo install --path .                                              # from a local clone
 ```
 
 Requires the `colab` command (`uv tool install google-colab-cli`) on Linux or macOS.

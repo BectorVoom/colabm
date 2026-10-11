@@ -30,19 +30,35 @@ You need:
    uv tool install google-colab-cli
    ```
 
-3. Rust's `cargo`, to build `colabm`.
+3. Rust (`cargo`), because `colabm` is built on your computer when you
+   install it. Check with `cargo --version`. If it is missing, install Rust
+   from <https://rustup.rs>.
 
 ---
 
 ## Step 1. Install colabm
 
-1. Open a terminal in this project folder.
-2. Build and install:
+1. Install with **one** of these commands.
+
+   With `uv` (the same tool that installs the Colab CLI):
+
+   ```bash
+   uv tool install git+https://github.com/BectorVoom/colabm
+   ```
+
+   Or with `cargo`:
+
+   ```bash
+   cargo install --git https://github.com/BectorVoom/colabm --locked
+   ```
+
+   Or, if you have downloaded this project, from inside its folder:
 
    ```bash
    cargo install --path .
    ```
 
+2. Wait for the build to finish. The first build can take a minute.
 3. Check that it works:
 
    ```bash
@@ -50,6 +66,9 @@ You need:
    ```
 
    You should see the list of commands.
+
+To update later, run `uv tool upgrade colabm`, or run the same `cargo install`
+command again.
 
 ---
 

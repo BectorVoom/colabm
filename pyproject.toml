@@ -1,0 +1,14 @@
+# Lets `uv tool install` (and pip) build and install the Rust binary.
+[build-system]
+requires = ["maturin>=1.5,<2"]
+build-backend = "maturin"
+
+[project]
+name = "colabm"
+version = "0.1.0"
+description = "Manage several Google Colab CLI accounts"
+readme = "README.md"
+requires-python = ">=3.8"
+
+[tool.maturin]
+bindings = "bin"
